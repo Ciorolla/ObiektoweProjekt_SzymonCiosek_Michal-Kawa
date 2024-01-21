@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            minWidth="1920" minHeight="1080"
+            fx:controller="agh.ics.oop.gui.presenter.SimulationPresenter">
+    <top>
+        <VBox spacing="20">
+            <HBox>
+                <Label text="Map actions:"/>
+                <Label fx:id="descriptionLabel"/>
+            </HBox>
+            <HBox>
+                <Label text="Clicked animal details:"/>
+                <Label fx:id="animalInfoLabel" text="None clicked yet"/>
+            </HBox>
+            <HBox>
+                <Button fx:id="stopButton" text="Stop Simulation" onAction="#stopSimulation"/>
+            </HBox>
+            <HBox>
+                <Button fx:id="resumeButton" text="Resume Simulation" onAction="#resumeSimulation"/>
+            </HBox>
+        </VBox>
+    </top>
+
+    <center>
+        <HBox alignment="CENTER">
+            <GridPane fx:id="mapGrid" alignment="CENTER" gridLinesVisible="true"/>
+        </HBox>
+    </center>
+
+</BorderPane>

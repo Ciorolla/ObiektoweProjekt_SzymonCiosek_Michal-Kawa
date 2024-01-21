@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            minHeight="100.0" minWidth="500.0"
+            fx:controller="agh.ics.oop.gui.presenter.MenuPresenter">
+
+    <center>
+        <VBox spacing="10">
+            <HBox spacing="10">
+                <Label text="Enter map width:" />
+                <TextField fx:id="mapWidth" text="32" minWidth="300" />
+            </HBox>
+            <HBox spacing="10">
+                <Label text="Enter map height:" />
+                <TextField fx:id="mapHeight" text="32" minWidth="300" />
+            </HBox>
+            <HBox spacing="10">
+                <Label text="Enter starting plant count:" />
+                <TextField fx:id="startingPlantCount" text="20" minWidth="300" />
+            </HBox>
+            <HBox spacing="10">
+                <Label text="Enter starting animal count:" />
+                <TextField fx:id="startingAnimalCount" text="50" minWidth="300" />
+            </HBox>
+            <HBox spacing="10">
+                <Label text="Enter energy recovered from eaten plant:" />
+                <TextField fx:id="plantEnergy" text="30" minWidth="300" />
+            </HBox>
+            <HBox spacing="10">
+                <Label text="Enter how many plants grow each day:" />
+                <TextField fx:id="plantGrowthPerDay" text="5" minWidth="300" />
+            </HBox>
+            <HBox spacing="10">
+                <Label text="Enter with how much energy each animal starts with:" />
+                <TextField fx:id="startingAnimalEnergy" text="100" minWidth="300" />
+            </HBox>
+            <HBox spacing="10">
+                <Label text="Enter how much energy is required for animals to become fertile:" />
+                <TextField fx:id="breedingRequiredEnergy" text="50" minWidth="300" />
+            </HBox>
+            <HBox spacing="10">
+                <Label text="Enter how much energy is used for animals to breed:" />
+                <TextField fx:id="breedingConsumptionEnergy" text="30" minWidth="300" />
+            </HBox>
+            <HBox spacing="10">
+                <Label text="Enter minimum number for each mutation:" />
+                <TextField fx:id="minimumMutationNumber" text="1" minWidth="300" />
+            </HBox>
+            <HBox spacing="10">
+                <Label text="Enter maximum number for each mutation:" />
+                <TextField fx:id="maximumMutationNumber" text="3" minWidth="300" />
+            </HBox>
+            <HBox spacing="10">
+                <Label text="Enter genome length:" />
+                <TextField fx:id="genomeLength" text="8"  minWidth="300" />
+            </HBox>
+            <HBox spacing="10">
+                <Label text="Enable crazy animal behavioral pattern:" />
+                <CheckBox fx:id="crazyAnimalEnabled" minWidth="300">crazy animal</CheckBox>
+            </HBox>
+            <HBox spacing="10">
+                <Label text="Enable toxic plants on the map:" />
+                <CheckBox fx:id="toxicPlantsEnabled" minWidth="300">toxic plant</CheckBox>
+            </HBox>
+            <HBox spacing="10">
+                <Label text="Enable save to file:" />
+                <CheckBox fx:id="saveToFileEnabled" minWidth="300">save to file</CheckBox>
+            </HBox>
+            <HBox>
+                <Button fx:id="startButton" text="Start simulation" onAction="#startSimulation" minWidth="300" />
+            </HBox>
+            <HBox>
+                <Label text="Potential error:" />
+                <Label fx:id="errorLabel" textFill="red" />
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>
